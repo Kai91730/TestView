@@ -41,7 +41,7 @@ class TableViewController: UIViewController {
     
     private func getData() {
         
-//        dataView.activityIndicator.startAnimating()
+        dataView.activityIndicator.startAnimating()
         apiService.regionText = region
         apiService.getDataFromApi { [weak self] (coffeeDatas) in
    
@@ -49,7 +49,7 @@ class TableViewController: UIViewController {
             
             DispatchQueue.main.async {
                 self?.dataView.updateFrame()
-//                self?.dataView.activityIndicator.stopAnimating()
+                self?.dataView.activityIndicator.stopAnimating()
             }
         }
     }

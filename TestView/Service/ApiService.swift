@@ -20,12 +20,15 @@ class ApiService {
         switch region {
         
         case .taipei:
-            print()
             regionUrl = Regions.taipei.text()
+        case .taoyuan:
+            regionUrl = Regions.taoyuan.text()
         case .taichung:
             regionUrl = Regions.taichung.text()
         case .kaohsiung:
             regionUrl = Regions.kaohsiung.text()
+        case .pingtung:
+            regionUrl = Regions.pingtung.text()
         default:
             print("查無此地點")
 //            baseUrl = ""

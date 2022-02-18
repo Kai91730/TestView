@@ -11,13 +11,13 @@ import Alamofire
 class MainViewController: UIViewController {
     
     let mainView:MainView = MainView()
-    var regions: [String] = ["台北","台中","高雄"]
+    var regions: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegate()
         setupDataSource()
-        
+        initVariable()
         initView()
     }
     
@@ -27,6 +27,12 @@ class MainViewController: UIViewController {
     
     private func setupDataSource() {
         mainView.collectionView.dataSource = self
+    }
+    
+    private func initVariable() {
+        for region in Regions.allCases {
+            regions.append(region.rawValue)
+        }
     }
     
     private func initView() {

@@ -25,6 +25,7 @@
 		2AAE2B24278C20480038327F /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE2B23278C20480038327F /* DataView.swift */; };
 		2AAE2B26278C292F0038327F /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE2B25278C292F0038327F /* Regions.swift */; };
 		2AAE2B2A278D97470038327F /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE2B29278D97470038327F /* FloatExtensions.swift */; };
+		2AAE2B2E27B0C5680038327F /* TestSomething.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE2B2D27B0C5680038327F /* TestSomething.swift */; };
 		D8F0B58F38C012803CC4EC9A /* Pods_TestView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4976979AE5C2F847250D415A /* Pods_TestView.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +52,7 @@
 		2AAE2B23278C20480038327F /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		2AAE2B25278C292F0038327F /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
 		2AAE2B29278D97470038327F /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
+		2AAE2B2D27B0C5680038327F /* TestSomething.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSomething.swift; sourceTree = "<group>"; };
 		4976979AE5C2F847250D415A /* Pods_TestView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,6 +136,7 @@
 				2AAE2B0C278C1BF00038327F /* MainVIewController + UICollectionViewExtension.swift */,
 				2AAE2B21278C1E210038327F /* TableViewController.swift */,
 				2AAE2B0B278C1BF00038327F /* TableVIewController + UITableViewExtension.swift */,
+				2AAE2B2D27B0C5680038327F /* TestSomething.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +222,7 @@
 				2AAE2ABF278C14470038327F /* Frameworks */,
 				2AAE2AC0278C14470038327F /* Resources */,
 				0D8BCB34BB05F34D4B46C073 /* [CP] Embed Pods Frameworks */,
+				9D04C3E08250CEB682690D59 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -314,6 +318,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9D04C3E08250CEB682690D59 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestView/Pods-TestView-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestView/Pods-TestView-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestView/Pods-TestView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -333,6 +354,7 @@
 				2AAE2B24278C20480038327F /* DataView.swift in Sources */,
 				2AAE2B26278C292F0038327F /* Regions.swift in Sources */,
 				2AAE2B1B278C1BF00038327F /* CoffeeShopData.swift in Sources */,
+				2AAE2B2E27B0C5680038327F /* TestSomething.swift in Sources */,
 				2AAE2B18278C1BF00038327F /* MainViewController.swift in Sources */,
 				2AAE2B1A278C1BF00038327F /* MainVIewController + UICollectionViewExtension.swift in Sources */,
 				2AAE2B19278C1BF00038327F /* TableVIewController + UITableViewExtension.swift in Sources */,
@@ -478,6 +500,8 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TestView/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				EXCLUDED_ARCHS = "";
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = TestView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,6 +523,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"TestView/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				INFOPLIST_FILE = TestView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A90077927BF74B00013F2B0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A90077827BF74B00013F2B0 /* MapViewController.swift */; };
+		2A90077D27D0962C0013F2B0 /* GoogleMapGeocodingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A90077C27D0962C0013F2B0 /* GoogleMapGeocodingData.swift */; };
 		2AAE2AC6278C14470038327F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE2AC5278C14470038327F /* AppDelegate.swift */; };
 		2AAE2AC8278C14470038327F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE2AC7278C14470038327F /* SceneDelegate.swift */; };
 		2AAE2ACC278C14490038327F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2AAE2ACB278C14490038327F /* Assets.xcassets */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		1E2DC4B8541FF6B6D60BDF5E /* Pods-TestView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestView.debug.xcconfig"; path = "Target Support Files/Pods-TestView/Pods-TestView.debug.xcconfig"; sourceTree = "<group>"; };
 		268760D69F568C972514A00C /* Pods-TestView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestView.release.xcconfig"; path = "Target Support Files/Pods-TestView/Pods-TestView.release.xcconfig"; sourceTree = "<group>"; };
+		2A90077827BF74B00013F2B0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		2A90077C27D0962C0013F2B0 /* GoogleMapGeocodingData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMapGeocodingData.swift; sourceTree = "<group>"; };
 		2AAE2AC2278C14470038327F /* TestView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AAE2AC5278C14470038327F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AAE2AC7278C14470038327F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 				2AAE2B0C278C1BF00038327F /* MainVIewController + UICollectionViewExtension.swift */,
 				2AAE2B21278C1E210038327F /* TableViewController.swift */,
 				2AAE2B0B278C1BF00038327F /* TableVIewController + UITableViewExtension.swift */,
+				2A90077827BF74B00013F2B0 /* MapViewController.swift */,
 				2AAE2B2D27B0C5680038327F /* TestSomething.swift */,
 			);
 			path = Controller;
@@ -146,6 +151,7 @@
 			children = (
 				2AAE2B0E278C1BF00038327F /* CoffeeShopData.swift */,
 				2AAE2B25278C292F0038327F /* Regions.swift */,
+				2A90077C27D0962C0013F2B0 /* GoogleMapGeocodingData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -344,6 +350,7 @@
 			files = (
 				2AAE2B1D278C1BF00038327F /* CustomTableViewCell.swift in Sources */,
 				2AAE2AC6278C14470038327F /* AppDelegate.swift in Sources */,
+				2A90077D27D0962C0013F2B0 /* GoogleMapGeocodingData.swift in Sources */,
 				2AAE2B2A278D97470038327F /* FloatExtensions.swift in Sources */,
 				2AAE2B20278C1BF00038327F /* ApiService.swift in Sources */,
 				2AAE2AC8278C14470038327F /* SceneDelegate.swift in Sources */,
@@ -358,6 +365,7 @@
 				2AAE2B18278C1BF00038327F /* MainViewController.swift in Sources */,
 				2AAE2B1A278C1BF00038327F /* MainVIewController + UICollectionViewExtension.swift in Sources */,
 				2AAE2B19278C1BF00038327F /* TableVIewController + UITableViewExtension.swift in Sources */,
+				2A90077927BF74B00013F2B0 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

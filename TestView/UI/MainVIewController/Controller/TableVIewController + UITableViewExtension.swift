@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import GoogleMaps
 
 extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
@@ -42,5 +43,13 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return region
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(" \(indexPath.row+1) pressed!")
+        
+        let mapVC = MapViewController()
+        mapVC.address = coffeeShops[indexPath.row].address
+        navigationController?.pushViewController(mapVC, animated: true)
     }
 }

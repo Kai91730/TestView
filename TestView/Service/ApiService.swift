@@ -6,11 +6,13 @@
 //
 
 import Foundation
+import Alamofire
 
 class ApiService {
     
     var regionText:String = ""
-
+    var address: String = ""
+    
     func getDataFromApi( completion: @escaping ( _ coffeeShopDatas: [CoffeeShopData] ) -> () ) {
         
         let baseUrl: String = "https://cafenomad.tw/api/v1.2/cafes/"
@@ -64,6 +66,38 @@ class ApiService {
 
         } else {
             print("invalid URL")
+        }
+    }
+    
+    func getCoordinateFromApi( completion: @escaping (_ datas: GoogleMapGeocodingData) -> () ) {
+        
+        let url = "https://maps.googleapis.com/maps/api/geocode/json?address=\(address)&key=\(AppDelegate.googleApiKey)"
+        
+        print("url is : \(url)")
+        
+        Alamofire.request(url).responseJSON { response in
+            
+            if let data = response.data {
+                
+                let decoder = JSONDecoder()
+                
+                do {
+                    if let coordinateData = try? decoder.decode(GoogleMapGeocodingData.self, from: data) {
+                    
+                    completion(coordinateData)
+                    
+                    print("getCoordinate done")
+                }
+                    
+                } catch {
+                    print(error)
+                }
+                    
+                
+                
+            } else {
+                print("error: \(response.error)")
+            }
         }
     }
 

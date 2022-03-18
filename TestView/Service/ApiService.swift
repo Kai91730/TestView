@@ -71,11 +71,12 @@ class ApiService {
     
     func getCoordinateFromApi( completion: @escaping (_ datas: GoogleMapGeocodingData) -> () ) {
         
-        let url = "https://maps.googleapis.com/maps/api/geocode/json?address=\(address)&key=\(AppDelegate.googleApiKey)"
-        
-        print("url is : \(url)")
-        
-        Alamofire.request(url).responseJSON { response in
+        guard let urlString = "https://maps.googleapis.com/maps/api/geocode/json?address=\(address)&key=\(AppDelegate.googleApiKey)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+                    let url = URL(string: urlString) else {
+                    print("Some Error urlString to URL")
+                    return
+                }
+        Alamofire.request(url, method: .get, parameters: nil, encoding: URLEncoding.default, headers: nil).responseJSON { response in
             
             if let data = response.data {
                 

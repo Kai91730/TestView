@@ -27,7 +27,6 @@
 		2AAE2B24278C20480038327F /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE2B23278C20480038327F /* DataView.swift */; };
 		2AAE2B26278C292F0038327F /* Regions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE2B25278C292F0038327F /* Regions.swift */; };
 		2AAE2B2A278D97470038327F /* FloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE2B29278D97470038327F /* FloatExtensions.swift */; };
-		2AAE2B2E27B0C5680038327F /* TestSomething.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AAE2B2D27B0C5680038327F /* TestSomething.swift */; };
 		D8F0B58F38C012803CC4EC9A /* Pods_TestView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4976979AE5C2F847250D415A /* Pods_TestView.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,7 +55,6 @@
 		2AAE2B23278C20480038327F /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
 		2AAE2B25278C292F0038327F /* Regions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Regions.swift; sourceTree = "<group>"; };
 		2AAE2B29278D97470038327F /* FloatExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatExtensions.swift; sourceTree = "<group>"; };
-		2AAE2B2D27B0C5680038327F /* TestSomething.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSomething.swift; sourceTree = "<group>"; };
 		4976979AE5C2F847250D415A /* Pods_TestView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,7 +139,6 @@
 				2AAE2B21278C1E210038327F /* TableViewController.swift */,
 				2AAE2B0B278C1BF00038327F /* TableVIewController + UITableViewExtension.swift */,
 				2A90077827BF74B00013F2B0 /* MapViewController.swift */,
-				2AAE2B2D27B0C5680038327F /* TestSomething.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -361,7 +358,6 @@
 				2AAE2B24278C20480038327F /* DataView.swift in Sources */,
 				2AAE2B26278C292F0038327F /* Regions.swift in Sources */,
 				2AAE2B1B278C1BF00038327F /* CoffeeShopData.swift in Sources */,
-				2AAE2B2E27B0C5680038327F /* TestSomething.swift in Sources */,
 				2AAE2B18278C1BF00038327F /* MainViewController.swift in Sources */,
 				2AAE2B1A278C1BF00038327F /* MainVIewController + UICollectionViewExtension.swift in Sources */,
 				2AAE2B19278C1BF00038327F /* TableVIewController + UITableViewExtension.swift in Sources */,

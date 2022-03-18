@@ -23,41 +23,17 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         super.viewDidLoad()
         self.view.addSubview(mapView)
         
-//        getCoordinateData2()
+        mapView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         getCoordinateData {
             self.setupMapView()
             self.setupGMSMarker()
             self.setupDelegate()
+            print("setup GoogleMap done")
         }
         
-        print("setup delegate Done")
-    }
-    
-    private func getCoordinateData2() {
-        
-        let url = "https://maps.googleapis.com/maps/api/geocode/json?address=\(address)&key=\(AppDelegate.googleApiKey)"
-        
-        print("url is : \(url)")
-        
-        Alamofire.request(url).responseJSON { response in
-            
-            if let data = response.data {
-                
-                let decoder = JSONDecoder()
-                if let googleMapGeocodingData = try? decoder.decode(GoogleMapGeocodingData.self, from: data) {
-                    
-                    if let location = googleMapGeocodingData.results.first?.geometry.location {
-                        
-                        self.location = location
-                    }
-                    
-                    print("getCoordinate in MapVC done")
-                }
-                
-            } else {
-                print("error: \(response.error)")
-            }
-        }
     }
     
     private func getCoordinateData( completion: @escaping ( () -> () ) ) {
@@ -77,10 +53,10 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
     
     private func setupMapView() {
         
-        let camera = GMSCameraPosition.camera(withLatitude: location.lat, longitude: location.lng, zoom: 25.0)
+        let camera = GMSCameraPosition.camera(withLatitude: location.lat, longitude: location.lng, zoom: 20.0)
         
-        mapView = GMSMapView(frame: CGRect(x: 0, y: 0, width: fullScreenSize.width, height: fullScreenSize.height), camera: camera)
-        
+        mapView.camera = camera
+        mapView.setMinZoom(16, maxZoom: 24)
         
         print("lat: \(location.lat) & lng: \(location.lng)")
     }

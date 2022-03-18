@@ -12,7 +12,8 @@ import Alamofire
 class MapViewController: UIViewController, GMSMapViewDelegate {
     
     lazy var address: String = ""
-
+    lazy var shopName: String = ""
+    
     private let fullScreenSize = UIScreen.main.bounds
     private lazy var apiService: ApiService = ApiService()
     private var mapView: GMSMapView = GMSMapView()
@@ -67,7 +68,7 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         let marker: GMSMarker = GMSMarker(position: CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng))
         
         marker.map = mapView
-        marker.title = "小高拉麵" //TODO
+        marker.title = shopName
     }
     
     private func setupDelegate() {
@@ -78,6 +79,4 @@ class MapViewController: UIViewController, GMSMapViewDelegate {
         print("information of marker is tapped")
     }
     
-    
-    //在想要繼續做街景還是搜尋地址定位
 }

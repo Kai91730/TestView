@@ -50,6 +50,7 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
         
         let mapVC = MapViewController()
         mapVC.address = coffeeShops[indexPath.row].address
+        mapVC.shopName = coffeeShops[indexPath.row].name
         navigationController?.pushViewController(mapVC, animated: true)
     }
 }
